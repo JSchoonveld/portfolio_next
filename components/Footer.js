@@ -56,6 +56,14 @@ export default function Footer() {
                                 height={40}
                             />
                         </a>
+                        <a target={"_blank"} rel="noopener noreferrer" href="https://www.instagram.com/jesseschoonveld/">
+                            <Image
+                                src="/icons/insta.svg"
+                                alt="Instagram logo"
+                                width={40}
+                                height={40}
+                            />
+                        </a>
                     </div>
                 </div>
 

@@ -9,7 +9,7 @@ export default function ProjectSection() {
                         Bekijk hier mijn recente projecten
                     </h2>
                 </div>
-                <div className="row">
+                <div className="row my-5">
                     <div className="col-lg-4">
                         <ProjectPreview/>
                     </div>
