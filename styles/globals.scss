@@ -73,5 +73,19 @@ a:hover {
 }
 
 .content-section {
-  min-height: 80vh;
+
+}
+
+#header a.btn.btn-primary {
+
+  svg {
+    margin-left: 15px;
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(90deg);
+      transition: all 350ms ease-in-out;
+    }
+  }
 }

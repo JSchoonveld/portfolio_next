@@ -7,8 +7,7 @@ import AboutSection from '../components/AboutSection'
 import Footer from '../components/Footer'
 import ContactSection from "../components/ContactSection";
 import ProjectSection from "../components/ProjectSection";
-
-import Link from "next/link";
+import FadeHeader from "../components/FadeHeader";
 
 export default function Home() {
   return (
@@ -19,15 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className="header">
-          <h1 className={styles.title}>
-            Welcome! My name is <span className={"white"}>Jesse Schoonveld</span><br/>
-            And I am a <span className="white">front-end </span>developer
-          </h1>
-          <Link href="#about">
-            <a className={"btn btn-primary mt-3"}>View my work</a>
-          </Link>
-        </div>
+        <FadeHeader/>
 
         <div className="container-fluid px-0">
           <NavBar />

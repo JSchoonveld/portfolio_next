@@ -13,7 +13,7 @@ export default function AboutSection() {
                         Accusantium
                         ad aut corporis inventore numquam optio quaerat quis suscipit, voluptatibus.</p>
                 </div>
-                <div className="row">
+                <div className="row my-5">
                     <div className="col-md-4 text-center">
                         <Quality/>
                     </div>
