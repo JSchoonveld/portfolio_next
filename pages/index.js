@@ -22,7 +22,7 @@ export default function Home() {
         <div className="header">
           <h1 className={styles.title}>
             Welcome! My name is <span className={"white"}>Jesse Schoonveld</span><br/>
-            And I'm a <span className="white">front-end </span>developer
+            And I am a <span className="white">front-end </span>developer
           </h1>
           <Link href="#about">
             <a className={"btn btn-primary mt-3"}>View my work</a>
