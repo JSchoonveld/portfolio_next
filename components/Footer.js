@@ -48,7 +48,7 @@ export default function Footer() {
                     </div>
                     <div className="col-md-4 footer-socials-section">
                         <h3>Socials</h3>
-                        <a target={"_blank"} href="https://www.linkedin.com/in/jesse-schoonveld-423a1740/">
+                        <a target={"_blank"} rel="noopener noreferrer" href="https://www.linkedin.com/in/jesse-schoonveld-423a1740/">
                             <Image
                                 src="/icons/linkedin.svg"
                                 alt="Linkedin logo"
