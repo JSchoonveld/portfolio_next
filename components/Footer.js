@@ -46,7 +46,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-md-4 footer-socials-section">
+                    <div className="col-md-4 footer-socials-section text-center">
                         <h3>Socials</h3>
                         <a target={"_blank"} rel="noopener noreferrer" href="https://www.linkedin.com/in/jesse-schoonveld-423a1740/">
                             <Image
@@ -70,4 +70,22 @@ export default function Footer() {
             </div>
         </footer>
     )
+}
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.querySelector("nav");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
 }

@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function NavBar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg bg-dark text-white navbar-dark dark">
             <div className="container">
                 <Link href="/">
                     <a className="navbar-brand">Navbar</a>
@@ -16,6 +16,11 @@ export default function NavBar() {
                         <li className="nav-item">
                             <Link href="#about">
                                 <a>About</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="#projects">
+                                <a>Projects</a>
                             </Link>
                         </li>
                         <li className="nav-item">

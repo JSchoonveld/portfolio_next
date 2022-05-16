@@ -1,9 +1,15 @@
 nav.navbar {
   width: 100%;
 
+
   li.nav-item {
     margin-left: 5px;
     margin-right: 5px;
   }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
 }
 
