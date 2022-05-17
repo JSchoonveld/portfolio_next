@@ -33,6 +33,19 @@ a:hover {
   font-size: 1.2rem;
 }
 
+.btn-primary {
+  background-color: #000035;
+  border: 3px solid #000035;
+
+  &:hover, &:focus{
+    background-color: transparent;
+    border: 3px solid #000035;
+    color: #000035;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
 .btn-tertiary {
   color: #fff;
   border: 2px solid white;

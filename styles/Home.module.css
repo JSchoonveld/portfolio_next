@@ -41,8 +41,14 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
+}
+
+@media screen and (min-width: 475px) {
+  .title {
+    font-size: 3rem;
+  }
 }
 
 .title,
