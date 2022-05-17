@@ -31,7 +31,7 @@ export default function ContactSection(){
                                     <textarea className="form-control" name="message" id="InputMessage"cols="30" rows="10" placeholder={"Your message"} />
                                 </div>
                                 <div className="d-flex justify-content-center form-submit-section">
-                                    <button type="submit" className="btn btn-tertiary">
+                                    <button type="submit" className="btn btn-tertiary mt-2">
                                         Submit
                                     </button>
                                 </div>
