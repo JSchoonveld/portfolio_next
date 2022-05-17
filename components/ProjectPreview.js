@@ -9,8 +9,8 @@ export default function ProjectPreview(props) {
                 <Image
                     src={props.imageUrl}
                     alt={props.title}
-                    width={400}
-                    height={250}
+                    width={335}
+                    height={210}
                 />
 
             </div>
