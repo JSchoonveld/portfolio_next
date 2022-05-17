@@ -3,16 +3,37 @@
 @import "_contact.scss";
 @import "_projecten.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@400;700&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  //overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
 }
 h1 {
   font-size: 3rem;
+}
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+h2::after {
+  content: '';
+  border-bottom: 3px solid #000;
+  width: 70px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 14px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 a {
@@ -100,5 +121,97 @@ a:hover {
       transform: rotate(90deg);
       transition: all 350ms ease-in-out;
     }
+  }
+}
+
+.quality-bg {
+  background-color: #189383;
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  img {
+    filter: brightness(0) invert(1);
+    position: relative;
+    z-index: 1;
+  }
+
+  .quality-content {
+
+  }
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 500px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 6%);
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .title-container {
+    max-width: 30%;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      z-index: 2;
+      margin-bottom: 0;
+    }
+  }
+  .progress-bar-container {
+    width: 60%;
+    height: 100%;
+    .progress-bar {
+      height: 100%;
+      background-color: lightblue;
+    }
+  }
+  .percentage-container {
+    max-width: 10%;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .bar-container {
+    width: 100%;
+  }
+}
+
+.skillbar-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 2000px) {
+  .skillbar-container {
+    width: 50vw;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .skillbar-container {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
