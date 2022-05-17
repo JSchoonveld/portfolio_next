@@ -8,8 +8,9 @@ import Footer from '../components/Footer'
 import ContactSection from "../components/ContactSection";
 import ProjectSection from "../components/ProjectSection";
 import FadeHeader from "../components/FadeHeader";
+import Articles from "../components/Articles";
 
-export default function Home() {
+export default function Home({articles, categories, homepage}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,6 +27,7 @@ export default function Home() {
 
         <AboutSection />
         <ProjectSection/>
+          <Articles articles={articles} />
         <ContactSection />
 
       </main>
@@ -33,4 +35,27 @@ export default function Home() {
      <Footer />
     </div>
   )
+}
+
+export async function getStaticProps() {
+    // Run API calls in parallel
+    const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
+        fetchAPI("/articles", { populate: ["image", "category"] }),
+        fetchAPI("/categories", { populate: "*" }),
+        fetchAPI("/homepage", {
+            populate: {
+                hero: "*",
+                seo: { populate: "*" },
+            },
+        }),
+    ]);
+
+    return {
+        props: {
+            articles: articlesRes.data,
+            categories: categoriesRes.data,
+            homepage: homepageRes.data,
+        },
+        revalidate: 1,
+    };
 }
