@@ -4,14 +4,14 @@ export default function ProjectSection() {
     return (
         <section className={"content-section pt-5"} id="projects">
             <div className={'container'}>
-                <div className="row my-4 text-center">
+                <div className="row my-lg-4 text-center">
                     <h2>
                         Projects
                     </h2>
                     <p className={"mt-5"}>These are some of the projects I made during my internship at NC-websites</p>
                 </div>
-                <div className="row mb-5 mt-3">
-                    <div className="col-lg-4">
+                <div className="row justify-content-center mb-5 mt-3">
+                    <div className="col-lg-4" data-aos="flip-left">
                         <ProjectPreview title={"ExoDevo"} imageUrl={"/images/exodevo.png"} website={"https://www.exodevo.com"} />
                     </div>
                     <div className="col-lg-4">

@@ -4,6 +4,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CS
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS
 
+
+
 function MyApp({ Component, pageProps }) {
   return <div>
       <Component {...pageProps} />
