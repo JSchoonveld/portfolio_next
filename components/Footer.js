@@ -13,16 +13,16 @@ export default function Footer() {
         <footer>
             <div className={'container'}>
                 <div className="row py-5">
-                    <div className="col-md-4 d-flex flex-column footer-contact-section">
+                    <div className="col-md-4 d-flex flex-column footer-contact-section text-center text-md-left">
                         <h3>Get in touch!</h3>
-                        <div className="d-flex align-items-center my-2">
+                        <div className="d-flex align-items-center my-2 justify-content-center justify-content-md-start">
                             <FontAwesomeIcon
                                 icon={faPhone}
                                 style={{ fontSize: 100, color: "blue" }}
                             />
                             <a className={"contact-tel d-flex align-items-center"} href="tel:0638139603">+31 6 38 139 603</a>
                         </div>
-                        <div className="d-flex align-items-center my-2">
+                        <div className="d-flex align-items-center my-2 justify-content-center justify-content-md-start">
                             <FontAwesomeIcon
                                 icon={faEnvelope}
                                 style={{ fontSize: 100, color: "blue" }}
@@ -31,7 +31,7 @@ export default function Footer() {
                         </div>
 
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 text-center text-md-left mt-4 mt-md-0">
                         <h3>Sitemap</h3>
                         <ul className="navbar-nav">
                             <li className="nav-item">
@@ -46,7 +46,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-md-4 footer-socials-section text-center">
+                    <div className="col-md-4 footer-socials-section text-center mt-4 mt-md-0">
                         <h3>Socials</h3>
                         <a target={"_blank"} rel="noopener noreferrer" href="https://www.linkedin.com/in/jesse-schoonveld-423a1740/">
                             <Image
