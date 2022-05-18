@@ -8,29 +8,43 @@ import Footer from '../components/Footer'
 import ContactSection from "../components/ContactSection";
 import ProjectSection from "../components/ProjectSection";
 import FadeHeader from "../components/FadeHeader";
+import {useSpring, animated} from 'react-spring'
+
+import VisibilitySensor from "react-visibility-sensor";
+
+const h2Styles = {
+    fontSize: "82px",
+};
 
 export default function Home({articles, categories, homepage}) {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Jesse Schoonveld portfolio</title>
-        <meta name="description" content="I'm currently studying web development and doing and internship as a front-end developer. This is my portfolio." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={styles.main}>
-        <FadeHeader/>
+    const styles = useSpring({
+        loop: true,
+        from: { opacity: 0, bottom: '-100px' },
+        to: { opacity: 1, bottom: '0' },
+    })
 
-        <div className="container-fluid px-0">
-          <NavBar />
+    return (
+        <div className={styles.container}>
+            <Head>
+                <title>Jesse Schoonveld portfolio</title>
+                <meta name="description"
+                      content="I'm currently studying web development and doing and internship as a front-end developer. This is my portfolio."/>
+                <link rel="icon" href="/favicon.ico"/>
+            </Head>
+            <main className={styles.main}>
+                <FadeHeader/>
+
+                <div className="container-fluid px-0">
+                    <NavBar/>
+                </div>
+                <AboutSection/>
+                <ProjectSection/>
+
+                <ContactSection/>
+
+            </main>
+
+            <Footer/>
         </div>
-
-        <AboutSection />
-        <ProjectSection/>
-        <ContactSection />
-
-      </main>
-
-     <Footer />
-    </div>
-  )
+    )
 }

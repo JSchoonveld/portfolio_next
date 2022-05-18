@@ -1,14 +1,23 @@
 import Quality from "./Quality";
 import SkillbarSection from "./SkillbarSection";
 import {Image} from "react-bootstrap";
+import {useSpring, animated} from "react-spring";
 
 export default function AboutSection() {
+
+    const styles = useSpring({
+        loop: true,
+        from: { opacity: 0, bottom: '-100px' },
+        to: { opacity: 1, bottom: '0' },
+    })
+
     return (
         <section className={"content-section"} id="about">
             <div className={'container'}>
                 <div className="row my-4 pt-5">
                     <div className="col text-center">
                         <h2>About</h2>
+                        <animated.button className="btn btn-primary">Button</animated.button>
                     </div>
                 </div>
                 <div className="row mt-5 mb-0">
