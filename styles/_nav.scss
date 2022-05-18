@@ -1,8 +1,8 @@
 nav.navbar {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 99;
+  //width: 100%;
+  //position: fixed;
+  //top: 0;
+  //z-index: 99;
 
   li.nav-item {
     margin-left: 5px;
@@ -10,4 +10,18 @@ nav.navbar {
   }
 }
 
+.navbar-nav a {
+  color: white;
+}
 
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white!important;
+
+  &:hover {
+    color: lightblue!important;
+  }
+}
