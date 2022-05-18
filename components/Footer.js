@@ -13,7 +13,7 @@ export default function Footer() {
         <footer>
             <div className={'container'}>
                 <div className="row py-5">
-                    <div className="col-md-4 d-flex flex-column footer-contact-section text-center text-md-left">
+                    <div className="col-md-4 d-flex flex-column footer-contact-section text-left text-md-left">
                         <h3>Get in touch!</h3>
                         <div className="d-flex align-items-center my-2 justify-content-center justify-content-md-start">
                             <FontAwesomeIcon
