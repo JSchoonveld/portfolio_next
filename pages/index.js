@@ -34,9 +34,9 @@ export default function Home({articles, categories, homepage}) {
             <main className={styles.main}>
                 <FadeHeader/>
 
-                <div className="container-fluid px-0">
-                    <NavBar/>
-                </div>
+
+                <NavBar/>
+
                 <AboutSection/>
                 <ProjectSection/>
 

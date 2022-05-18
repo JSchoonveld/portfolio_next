@@ -1,37 +1,23 @@
 import Link from 'next/link'
+import {Container, Nav, NavDropdown, Navbar} from "react-bootstrap";
+
+
 
 export default function NavBar() {
     return (
-        <nav className="navbar navbar-expand-lg bg-dark text-white navbar-dark dark">
-            <div className="container">
-                <Link href="/">
-                    <a className="navbar-brand">Navbar</a>
-                </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link href="#about">
-                                <a>About</a>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="#projects">
-                                <a>Projects</a>
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="#contact">
-                                <a>Contact</a>
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <Navbar dark={"true"} sticky={"top"} bg="dark" expand="lg">
+            <Container>
+                <Navbar.Brand className={"text-white"} href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#about">About</Nav.Link>
+                        <Nav.Link href="#projects">Projects</Nav.Link>
+                        <Nav.Link href="#contact">contact</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     )
 }
 

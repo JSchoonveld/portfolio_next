@@ -1,6 +1,6 @@
 import Quality from "./Quality";
 import SkillbarSection from "./SkillbarSection";
-import {Image} from "react-bootstrap";
+import {Button, Image} from "react-bootstrap";
 import {animated, useSpring} from "react-spring";
 import { Waypoint } from 'react-waypoint';
 import {useState} from "react";
