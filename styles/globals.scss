@@ -54,6 +54,7 @@ a:hover {
 .btn.btn-primary, .btn.btn-secondary, .btn-tertiary {
   padding: 10px 60px;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .btn-primary {
@@ -121,12 +122,11 @@ a:hover {
     }
   }
 }
-
 .quality-bg {
   background-color: #189383;
   clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,8 +138,24 @@ a:hover {
     position: relative;
     z-index: 1;
   }
-
-
+}
+.quality-content p{
+  font-size: 0.7rem
+}
+.quality-title {
+  font-size: 1rem;
+}
+@media screen and(min-width: 992px){
+  .quality-bg {
+    height: 200px;
+    width: 200px;
+  }
+  .quality-content p{
+    font-size: 1rem
+  }
+  .quality-title {
+    font-size: 2rem;
+  }
 }
 
 .bar-container {
