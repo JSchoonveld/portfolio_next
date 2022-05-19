@@ -23,7 +23,7 @@ export default function AboutSection() {
                     </div>
                 </div>
                 <div className="row mt-5 mb-0">
-                    <div className="col-md-6 col-lg-3 d-flex justify-content-center text-centermb-3 mb-lg-5 mb-lg-0">
+                    <div className="col-md-6 col-lg-3 d-flex justify-content-center text-center mb-3 mb-lg-5 mb-lg-0">
                         <Quality delay={200} title={"Fast"} description={"My websites are blazing fast"} imageUrl={"/icons/speedometer.png"}/>
                     </div>
                     <div className="col-md-6 col-lg-3 d-flex justify-content-center text-center mb-3 mb-lg-5 mb-lg-0">
