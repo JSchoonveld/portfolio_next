@@ -13,7 +13,7 @@ export default function Quality( props ) {
     });
 
     return (
-        <Waypoint onEnter={() => setInview(true)} onLeave={() => setInview(false)}>
+        <Waypoint onEnter={() => setInview(true)}>
         <animated.div style={{ position: 'relative', ...transition }}
                       className={"text-center d-flex flex-column align-items-center"}>
             <div className={"quality-bg"}>
@@ -27,8 +27,8 @@ export default function Quality( props ) {
                     />
                 </div>
             </div>
-            <h3 className={"my-3"}>{props.title}</h3>
-            <p className={"mt-2"}>{props.description}</p>
+            <h3 className={"my-3 quality-title"}>{props.title}</h3>
+            <p className={"mt-2 quality-content"}>{props.description}</p>
         </animated.div>
         </Waypoint>
     )
