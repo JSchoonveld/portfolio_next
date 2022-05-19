@@ -12,7 +12,7 @@ export default function ContactSection(){
     });
     const swipeRight = useSpring({
         delay: 200,
-        to: { opacity: !inView ? '0' : '1', transform: !inView ? 'translate(150px,0)' : 'translate(0px,0)' },
+        to: { opacity: !inView ? '0' : '1' },
     });
 
     return (
