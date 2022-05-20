@@ -20,14 +20,14 @@ export default function ContactSection(){
             <div className="container">
                 <div className="row mt-5">
                     <div className="col-md-6 offset-md-3 text-center pt-4">
-                        <Waypoint onEnter={() => setInview(true)} onLeave={() => setInview(false)}>
+                        <Waypoint onEnter={() => setInview(true)}>
                         <animated.h2 style={{ position: 'relative', ...swipeRight }}>Contact</animated.h2>
                         </Waypoint>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-6 offset-md-3">
-                        <Waypoint onEnter={() => setInview(true)} onLeave={() => setInview(false)}>
+                        <Waypoint onEnter={() => setInview(true)}>
                         <animated.div style={{ position: 'relative', ...transition }} className="form py-5">
                             <form action="#" method={"post"}>
                                 <div className="mb-3">

@@ -19,7 +19,7 @@ export default function SkillbarSection() {
 
     return(
         <Waypoint onEnter={() => { setInview(true); fillBar()  }}>
-        <animated.div style={{ ...transition }} className={"w-100"}>
+        <animated.div style={{ ...transition }} className={"w-100 d-flex flex-column align-items-center"}>
             <Skillbar delay={"100"} filled={data} title="CSS/Sass" percentage="85" />
             <Skillbar delay={"150"} filled={data} title="Bootstrap" percentage="95" />
             <Skillbar delay={"200"} filled={data} title="JavaScript" percentage="90" />

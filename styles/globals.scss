@@ -2,6 +2,7 @@
 @import "_footer.scss";
 @import "_contact.scss";
 @import "_projecten.scss";
+@import "_skills.scss";
 
 @import "custom";
 
@@ -158,72 +159,3 @@ a:hover {
   }
 }
 
-.bar-container {
-  display: flex;
-  flex-direction: row;
-  height: 30px;
-  width: 500px;
-  background-color: #fff;
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 6%);
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  .title-container {
-    max-width: 30%;
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    p {
-      z-index: 2;
-      margin-bottom: 0;
-    }
-  }
-  .progress-bar-container {
-    width: 60%;
-    height: 100%;
-    .progress-bar {
-      height: 100%;
-      background-color: lightblue;
-    }
-  }
-  .percentage-container {
-    max-width: 10%;
-    width: 10%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    p {
-      margin-bottom: 0;
-    }
-  }
-}
-@media only screen and (max-width: 600px) {
-  .bar-container {
-    width: 100%;
-  }
-}
-
-.skillbar-container {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media only screen and (max-width: 2000px) {
-  .skillbar-container {
-    width: 50vw;
-    padding-left: 10px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .skillbar-container {
-    width: 90vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
