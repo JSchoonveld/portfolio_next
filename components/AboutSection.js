@@ -28,7 +28,7 @@ export default function AboutSection() {
                     <Waypoint onEnter={() => setInview(true)}>
                     <animated.div style={{ position: 'relative', ...transition }} className="col-lg-5 d-flex flex-column justify-content-center align-items-center">
                         <Image
-                            src={"/images/jesse.jpg"}
+                            src={"/images/jesse.webp"}
                             alt={"Jesse"}
                             width={250}
                             height={250}
