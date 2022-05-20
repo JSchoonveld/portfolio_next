@@ -23,19 +23,19 @@ export default function ProjectSection() {
                 <Waypoint onEnter={() => setInview(true)}>
                 <animated.div style={{ position: 'relative', ...transition }} className="row justify-content-center mb-5 mt-3">
                     <div className="col-md-6 col-lg-4 px-0" data-aos="flip-left">
-                        <ProjectPreview title={"ExoDevo"} content={"This was a website I built for ExoDevo"} techs={"HTML/CSS/JS"} imageUrl={"/images/exodevo.png"} website={"https://www.exodevo.com"} />
+                        <ProjectPreview title={"ExoDevo"} content={"This was a website I built for ExoDevo"} techs={"HTML/CSS/JS"} imageUrl={"/images/exodevo.webp"} website={"https://www.exodevo.com"} />
                     </div>
                     <div className="col-md-6 col-lg-4">
-                        <ProjectPreview title={"NjordIC"} techs={"HTML/CSS/JS"} imageUrl={"/images/njordic.png"} website={"https://www.njordic.nl"} />
+                        <ProjectPreview title={"NjordIC"} techs={"HTML/CSS/JS"} imageUrl={"/images/njordic.webp"} website={"https://www.njordic.nl"} />
                     </div>
                     <div className="col-md-6 col-lg-4">
-                        <ProjectPreview title={"Geotechniek Speelman"} techs={"HTML/CSS/JS"} imageUrl={"/images/geotechniek.png"} website={"https://www.geotechniekspeelman.nl"} />
+                        <ProjectPreview title={"Geotechniek Speelman"} techs={"HTML/CSS/JS"} imageUrl={"/images/geotechniek.webp"} website={"https://www.geotechniekspeelman.nl"} />
                     </div>
                     <div className="col-md-6 col-lg-4">
-                        <ProjectPreview title={"Taxicentrale Oldambt"} techs={"HTML/CSS/JS"} imageUrl={"/images/taxi_oldambt.png"} website={"https://www.taxicentraleoldambt.nl"} />
+                        <ProjectPreview title={"Taxicentrale Oldambt"} techs={"HTML/CSS/JS"} imageUrl={"/images/taxi_oldambt.webp"} website={"https://www.taxicentraleoldambt.nl"} />
                     </div>
                     <div className="col-md-6 col-lg-4">
-                        <ProjectPreview title={"DMG Uitvaartzorg"} techs={"HTML/CSS/JS"} imageUrl={"/images/dmg.png"} website={"https://www.dmg-uitvaartzorg.nl/"} />
+                        <ProjectPreview title={"DMG Uitvaartzorg"} techs={"HTML/CSS/JS"} imageUrl={"/images/dmg.webp"} website={"https://www.dmg-uitvaartzorg.nl/"} />
                     </div>
                 </animated.div>
                 </Waypoint>
