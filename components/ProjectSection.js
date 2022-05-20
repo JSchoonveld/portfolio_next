@@ -23,7 +23,7 @@ export default function ProjectSection() {
                 <Waypoint onEnter={() => setInview(true)}>
                 <animated.div style={{ position: 'relative', ...transition }} className="row justify-content-center mb-5 mt-3">
                     <div className="col-md-6 col-lg-4 px-0" data-aos="flip-left">
-                        <ProjectPreview title={"ExoDevo"} techs={"HTML/CSS/JS"} imageUrl={"/images/exodevo.png"} website={"https://www.exodevo.com"} />
+                        <ProjectPreview title={"ExoDevo"} content={"This was a website I built for ExoDevo"} techs={"HTML/CSS/JS"} imageUrl={"/images/exodevo.png"} website={"https://www.exodevo.com"} />
                     </div>
                     <div className="col-md-6 col-lg-4">
                         <ProjectPreview title={"NjordIC"} techs={"HTML/CSS/JS"} imageUrl={"/images/njordic.png"} website={"https://www.njordic.nl"} />
