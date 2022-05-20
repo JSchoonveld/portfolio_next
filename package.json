@@ -24,9 +24,11 @@
     "react-waypoint": "^10.1.0"
   },
   "devDependencies": {
+    "@zeit/next-css": "^1.0.1",
     "dotenv-webpack": "^7.1.0",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
+    "next-purgecss": "^4.0.0",
     "sass": "^1.51.0"
   }
 }
