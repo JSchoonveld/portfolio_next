@@ -12,7 +12,9 @@ module.exports = {
         loader: "default",
         domains: ["localhost"],
     },
+    i18n: {
+        locales: ["en", "nl"],
+        defaultLocale: "nl",
+    },
     nextConfig
 };
-
-// module.exports = nextConfig
