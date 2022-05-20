@@ -1,4 +1,4 @@
-import {Button, Image, Modal} from "react-bootstrap";
+import {Button, Image, Modal, Carousel, CarouselItem} from "react-bootstrap";
 import {useState} from "react";
 import {animated, useSpring} from "react-spring";
 import { Waypoint } from 'react-waypoint';
@@ -24,6 +24,8 @@ export default function ProjectPreview(props) {
         to: {opacity: !inView ? '0' : '1', top: !inView ? '0px' : '20px'},
     });
 
+    const test = props.images;
+
     let showButton = (() => {
 
         return (
@@ -42,15 +44,53 @@ export default function ProjectPreview(props) {
 
 
                     <Modal show={show} onHide={handleClose}>
-                        <Modal.Header closeButton>
-                            <Modal.Title>{props.title}</Modal.Title>
+                        <Modal.Header>
+                            <Carousel indicators={false}>
+                                <Carousel.Item>
+                                    <Image
+                                        src={props.image1}
+                                        alt={props.title}
+                                        width={335}
+                                        height={210}
+                                    />
+
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Image
+                                        src={props.image2}
+                                        alt={props.title}
+                                        width={335}
+                                        height={210}
+                                    />
+
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Image
+                                        src={props.image3}
+                                        alt={props.title}
+                                        width={335}
+                                        height={210}
+                                    />
+
+                                </Carousel.Item>
+                            </Carousel>
+
                         </Modal.Header>
-                        <Modal.Body>{props.content}</Modal.Body>
+                        <Modal.Body>
+                            <Modal.Title><b>{props.title}</b></Modal.Title>
+                            <p><b>Techstack:</b> {props.techs}</p>
+                     
+                            {props.content}
+                        </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={handleClose}>
-                                Close
-                            </Button>
-                            <a className={"btn btn-primary"} href={props.website} target={"_blank"} rel="noopener noreferrer">Visit website</a>
+                                <div>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Close
+                                    </Button>
+                                </div>
+                                <div>
+                                    <a className={"btn btn-primary"} href={props.website} target={"_blank"} rel="noopener noreferrer">Visit website</a>
+                                </div>
                         </Modal.Footer>
                     </Modal>
                 </div>
@@ -65,7 +105,7 @@ export default function ProjectPreview(props) {
             {showDetails ? showButton() : ''}
             {/*<h3 className={"mb-3 text-center"}>{props.title}</h3>*/}
             <Image
-                src={props.imageUrl}
+                src={props.image1}
                 alt={props.title}
                 width={335}
                 height={210}
