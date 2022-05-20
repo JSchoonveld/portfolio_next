@@ -11,6 +11,7 @@ module.exports = {
     images: {
         loader: "default",
         domains: ["localhost"],
+        formats: ['image/webp'],
     },
     i18n: {
         locales: ["en", "nl"],
