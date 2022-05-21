@@ -3,6 +3,8 @@ nav.navbar {
   //position: fixed;
   //top: 0;
   //z-index: 99;
+  padding-bottom: 0;
+  padding-top: 0;
 
   li.nav-item {
     margin-left: 5px;
@@ -28,7 +30,8 @@ nav.navbar {
   }
 }
 .navbar-nav .nav-link.active {
-  color: lightblue!important;
+  color: white!important;
+  background-color: navy;
 }
 
 
