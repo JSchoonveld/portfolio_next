@@ -8,13 +8,15 @@ import Footer from '../components/Footer'
 import ContactSection from "../components/ContactSection";
 import ProjectSection from "../components/ProjectSection";
 import FadeHeader from "../components/FadeHeader";
-import {useSpring, animated} from 'react-spring'
+import {useSpring} from 'react-spring'
 
-import VisibilitySensor from "react-visibility-sensor";
+import Link from "next/link";
 
 const h2Styles = {
     fontSize: "82px",
 };
+
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Home({articles, categories, homepage}) {
     const styles = useSpring({
@@ -29,7 +31,7 @@ export default function Home({articles, categories, homepage}) {
                 <title>Jesse Schoonveld portfolio</title>
                 <meta name="description"
                       content="I'm currently studying web development and doing and internship as a front-end developer. This is my portfolio."/>
-                <link rel="icon" href="/favicon.ico"/>
+                <link rel="icon" href="favicon.ico"/>
             </Head>
             <main className={styles.main}>
                 <FadeHeader/>
