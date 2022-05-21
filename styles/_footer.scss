@@ -4,6 +4,14 @@ footer {
   min-height: fit-content;
 }
 
+.footer-col {
+  text-align: center;
+}
+@media screen and(min-width: 768px){
+  .footer-col {
+    text-align: left;
+  }
+}
 .footer-contact-section svg {
   width: 20px;
   height: 20px;

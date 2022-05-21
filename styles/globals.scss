@@ -35,7 +35,7 @@ h2::after {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -126,8 +126,8 @@ a:hover {
 .quality-bg {
   background-color: #189383;
   clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,6 +138,7 @@ a:hover {
     filter: brightness(0) invert(1);
     position: relative;
     z-index: 1;
+    transform: scale(0.7);
   }
 }
 .quality-content p{
@@ -148,14 +149,12 @@ a:hover {
 }
 @media screen and(min-width: 992px){
   .quality-bg {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
   }
   .quality-content p{
     font-size: 1rem
   }
-  .quality-title {
-    font-size: 2rem;
-  }
+
 }
 

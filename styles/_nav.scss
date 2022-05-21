@@ -8,6 +8,8 @@ nav.navbar {
     margin-left: 5px;
     margin-right: 5px;
   }
+
+
 }
 
 .navbar-nav a {
@@ -25,3 +27,8 @@ nav.navbar {
     color: lightblue!important;
   }
 }
+.navbar-nav .nav-link.active {
+  color: lightblue!important;
+}
+
+

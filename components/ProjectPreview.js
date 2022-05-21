@@ -10,8 +10,13 @@ export default function ProjectPreview(props) {
 
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleClose = (()=> {
+        setShow(false)
+        setShowDetails(false)
+    })
+    const handleShow = (()=> {
+        setShow(true)
+    })
 
 
     const transitionUp = useSpring({
@@ -24,12 +29,10 @@ export default function ProjectPreview(props) {
         to: {opacity: !inView ? '0' : '1', top: !inView ? '0px' : '20px'},
     });
 
-    const test = props.images;
-
     let showButton = (() => {
 
         return (
-            <div onMouseEnter={() => setInView(true)} onMouseLeave={() => setInView(false)} className={"project-preview-overlay"}>
+            <div onMouseOver={() => setInView(true)} onMouseOut={() => setInView(false)}  className={"project-preview-overlay"}>
                 <div className="content">
                     <animated.div style={{ position: 'relative', ...transitionDown }}>
                         <h3>{props.title}</h3>
@@ -79,7 +82,7 @@ export default function ProjectPreview(props) {
                         <Modal.Body>
                             <Modal.Title><b>{props.title}</b></Modal.Title>
                             <p><b>Techstack:</b> {props.techs}</p>
-                     
+
                             {props.content}
                         </Modal.Body>
                         <Modal.Footer>
@@ -100,10 +103,8 @@ export default function ProjectPreview(props) {
     })
 
     return (
-        // <a href={props.website} target={"_blank"} rel="noopener noreferrer">
-        <div onMouseEnter={() => setShowDetails(true)} onMouseLeave={() => setShowDetails(false)}  style={{position: 'relative'}} className="project">
+        <div tabIndex={0} onMouseOver={() => setShowDetails(true)} onMouseLeave={() => setShowDetails(false)} style={{position: 'relative'}} className="project">
             {showDetails ? showButton() : ''}
-            {/*<h3 className={"mb-3 text-center"}>{props.title}</h3>*/}
             <Image
                 src={props.image1}
                 alt={props.title}
@@ -112,9 +113,6 @@ export default function ProjectPreview(props) {
             />
 
         </div>
-        // </a>
-
-
     )
 
 
