@@ -2,7 +2,6 @@ import Skillbar from "./Skillbar";
 import {useState} from "react";
 import {animated, useSpring} from "react-spring";
 import {Waypoint} from "react-waypoint";
-
 export default function SkillbarSection() {
 
     const [inView, setInview] = useState(false);
