@@ -48,33 +48,17 @@ const Preview = ({ blok }) => {
                     <Modal show={show} onHide={handleClose}>
                         <Modal.Header>
                             <Carousel indicators={false}>
-                                <Carousel.Item>
-                                    <Image
-                                        src={blok.images[0].filename}
-                                        alt={blok.title}
-                                        width={335}
-                                        height={210}
-                                    />
+                                {blok.images.map((image) => (
+                                    <Carousel.Item  key={image.filename}>
+                                        <Image
+                                            src={image.filename}
+                                            alt={image.title}
+                                            width={335}
+                                            height={210}
+                                        />
+                                    </Carousel.Item>
+                                ))}
 
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <Image
-                                        src={blok.images[1].filename}
-                                        alt={blok.title}
-                                        width={335}
-                                        height={210}
-                                    />
-
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <Image
-                                        src={blok.images[2].filename}
-                                        alt={blok.title}
-                                        width={335}
-                                        height={210}
-                                    />
-
-                                </Carousel.Item>
                             </Carousel>
 
                         </Modal.Header>
