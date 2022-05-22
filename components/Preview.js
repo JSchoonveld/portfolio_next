@@ -47,35 +47,35 @@ const Preview = ({ blok }) => {
 
                     <Modal show={show} onHide={handleClose}>
                         <Modal.Header>
-                            {/*<Carousel indicators={false}>*/}
-                            {/*    <Carousel.Item>*/}
-                            {/*        <Image*/}
-                            {/*            src={blok.images[0].filename}*/}
-                            {/*            alt={blok.title}*/}
-                            {/*            width={335}*/}
-                            {/*            height={210}*/}
-                            {/*        />*/}
+                            <Carousel indicators={false}>
+                                <Carousel.Item>
+                                    <Image
+                                        src={blok.images[0].filename}
+                                        alt={blok.title}
+                                        width={335}
+                                        height={210}
+                                    />
 
-                            {/*    </Carousel.Item>*/}
-                            {/*    <Carousel.Item>*/}
-                            {/*        <Image*/}
-                            {/*            src={blok.images[1].filename}*/}
-                            {/*            alt={blok.title}*/}
-                            {/*            width={335}*/}
-                            {/*            height={210}*/}
-                            {/*        />*/}
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Image
+                                        src={blok.images[1].filename}
+                                        alt={blok.title}
+                                        width={335}
+                                        height={210}
+                                    />
 
-                            {/*    </Carousel.Item>*/}
-                            {/*    <Carousel.Item>*/}
-                            {/*        <Image*/}
-                            {/*            src={blok.images[2].filename}*/}
-                            {/*            alt={blok.title}*/}
-                            {/*            width={335}*/}
-                            {/*            height={210}*/}
-                            {/*        />*/}
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Image
+                                        src={blok.images[2].filename}
+                                        alt={blok.title}
+                                        width={335}
+                                        height={210}
+                                    />
 
-                            {/*    </Carousel.Item>*/}
-                            {/*</Carousel>*/}
+                                </Carousel.Item>
+                            </Carousel>
 
                         </Modal.Header>
                         <Modal.Body>
