@@ -14,9 +14,6 @@ const Projects = ({ blok }) => {
         to: {opacity: !inView ? '0' : '1', bottom: !inView ? '-200px' : '0'},
     });
 
-    //
-    // const { data, error } = useSwr('/api/projects', fetcher)
-
 
     return (
         <section {...storyblokEditable(blok)} className={"content-section pt-5"} id="projects">
@@ -30,7 +27,7 @@ const Projects = ({ blok }) => {
                 <Waypoint onEnter={() => setInview(true)}>
                     <animated.div style={{ position: 'relative', ...transition }} className="row justify-content-center g-0 mb-5 mt-3">
                         {blok.projects.map((project) => (
-                            <div key={project.id} className="col-md-6 col-lg-4 mb-3 mb-md-0" data-aos="flip-left">
+                            <div key={project.website} className="col-md-6 col-lg-4 mb-3 mb-md-0" data-aos="flip-left">
                                 <Preview blok={project} />
                             </div>
                         ))}
