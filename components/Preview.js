@@ -44,7 +44,6 @@ const Preview = ({ blok }) => {
                         </Button>
                     </animated.div>
 
-
                     <Modal show={show} onHide={handleClose}>
                         <Modal.Header>
                             <Carousel indicators={false}>
@@ -81,7 +80,6 @@ const Preview = ({ blok }) => {
                     </Modal>
                 </div>
             </div>
-
         )
     })
 
