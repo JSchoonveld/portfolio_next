@@ -12,6 +12,8 @@ import Projects from '../components/Projects'
 import { useSpring, animated } from 'react-spring'
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS
 
+require('dotenv').config()
+
 const components = {
     feature: Feature,
     grid: Grid,
@@ -24,7 +26,7 @@ const components = {
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 
 storyblokInit({
-    accessToken: "TrvOg6PotJmshV7jFuGFqgtt",
+    accessToken: process.env.STORYBLOK_KEY,
     use: [apiPlugin],
     components,
 });
