@@ -2,7 +2,6 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
 import {Waypoint} from "react-waypoint";
 import {animated, useSpring} from "react-spring";
 import {useState} from "react";
-import useSwr from "swr";
 import Preview from './Preview'
 
 const Projects = ({ blok }) => {
