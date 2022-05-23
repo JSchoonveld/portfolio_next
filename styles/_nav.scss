@@ -26,12 +26,15 @@ nav.navbar {
   color: white!important;
 
   &:hover {
-    color: lightblue!important;
+    color: white!important;
+    background-color: #189;
+    text-decoration: none;
   }
 }
 .navbar-nav .nav-link.active {
   color: white!important;
-  background-color: navy;
-}
+  background-color: #189;
 
+
+}
 
