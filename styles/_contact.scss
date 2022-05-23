@@ -1,4 +1,4 @@
-.contact-section {
+section#contact {
   background-color: #252934;
   width: 100%;
   color: #fff;
@@ -27,4 +27,43 @@
 
     }
   }
+
+  form{
+    input, textarea {
+      width: 100%;
+      padding: 15px;
+    }
+
+  }
+
+
+  .modal-header {
+    padding: 15px;
+  }
+
+  .btn-close {
+    margin: 0;
+    padding-right: 24px;
+  }
+  .modal-title {
+    h4 {
+      font-weight: bold;
+    }
+  }
+  .modal-content {
+    color: black;
+
+    p {
+      font-size: 1.3rem;
+
+    }
+  }
+
+  .modal-header {
+    border: none;
+  }
+  .modal-footer {
+    border: none;
+  }
+
 }
