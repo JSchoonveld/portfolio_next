@@ -111,6 +111,7 @@ a:hover {
 }
 
 #header a.btn.btn-primary {
+  text-decoration: none;
 
   svg {
     margin-left: 15px;
@@ -120,6 +121,7 @@ a:hover {
     svg {
       transform: rotate(90deg);
       transition: all 350ms ease-in-out;
+      text-decoration: none;
     }
   }
 }
