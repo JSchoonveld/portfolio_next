@@ -35,6 +35,7 @@ const Preview = ({ blok }) => {
                 <div className="content">
                     <animated.div style={{ position: 'relative', ...transitionDown }}>
                         <h3>{blok.title}</h3>
+                        <p className={"preview-tech"}>{blok.techs}</p>
                     </animated.div>
 
                     <animated.div style={{ position: 'relative', ...transitionUp }}>
