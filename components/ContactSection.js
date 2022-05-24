@@ -104,8 +104,8 @@ export default function ContactSection(){
                                             name="name"
                                             placeholder="Your name"
                                             required
-                                            minLength="8"
-                                            maxLength="20"
+                                            minLength="2"
+                                            maxLength="50"
                                             onChange={(e)=>{setName(e.target.value)}}
                                         />
                                     </div>
