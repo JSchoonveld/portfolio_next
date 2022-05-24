@@ -1,18 +1,23 @@
 import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
-import {Waypoint} from "react-waypoint";
-import {animated, useSpring} from "react-spring";
 import {useState} from "react";
-import Preview from './Preview'
+import ProjectCategory from './ProjectCategory'
+import PaginationTitle from "./PaginationTitle";
 
 const Projects = ({ blok }) => {
 
-    const [inView, setInview] = useState(false);
+    const [activeCategory, setActiveCategory] = useState('All');
 
-    const transition = useSpring({
-        delay: 500,
-        to: {opacity: !inView ? '0' : '1', bottom: !inView ? '-200px' : '0'},
-    });
+    const toggleActiveCategory = ((id)=> {
+        setActiveCategory(id)
+    })
 
+    console.log(blok.projects)
+    let active = blok.projects.filter(checkActive)
+
+    function checkActive(category) {
+        return category.title === activeCategory;
+    }
+    console.log(active)
 
     return (
         <section {...storyblokEditable(blok)} className={"content-section pt-5"} id="projects">
@@ -23,16 +28,17 @@ const Projects = ({ blok }) => {
                     </h2>
                     <p className={"mt-5"}>These are some of the projects I made during my internship at NC-websites</p>
                 </div>
-                <Waypoint onEnter={() => setInview(true)}>
-                    <animated.div style={{ position: 'relative', ...transition }} className="row justify-content-center g-0 mb-5 mt-3">
-                        {blok.projects.map((project) => (
-                            <div key={project.website} className="col-md-6 col-lg-4 mb-3 mb-md-0" data-aos="flip-left">
-                                <Preview blok={project} />
-                            </div>
+                <div className="row text-center py-3">
+                    <div className="col d-flex justify-content-center">
+                        {blok.projects.map((category) => (
+                            <PaginationTitle toggleActive={toggleActiveCategory} className={"px-2"} active={activeCategory === category.title} id={category.title} key={category.title} title={category.title}/>
                         ))}
-                    </animated.div>
-                </Waypoint>
+                    </div>
 
+                </div>
+                {active.map((category) => (
+                <ProjectCategory key={category.title} title={"HTML"} blok={category} />
+                    ))}
             </div>
         </section>
     );

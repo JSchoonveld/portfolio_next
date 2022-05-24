@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import {Container, Nav, NavDropdown, Navbar} from "react-bootstrap";
 
-
-
 export default function NavBar() {
     return (
         <Navbar dark={"true"} sticky={"top"} bg="dark" >
