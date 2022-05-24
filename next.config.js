@@ -26,5 +26,4 @@ module.exports = {
 
         return config;
     },
-    productionBrowserSourceMaps: true,
 };

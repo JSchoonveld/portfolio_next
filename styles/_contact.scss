@@ -66,4 +66,12 @@ section#contact {
     border: none;
   }
 
+  .modal-dialog {
+    position: fixed;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 }
