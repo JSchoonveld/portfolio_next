@@ -21,6 +21,11 @@
 
 }
 
+.category-list {
+  list-style-type: none;
+  padding: 0;
+}
+
 .project-preview-overlay {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.9);
@@ -107,7 +112,7 @@ h3.project-category-title{
     cursor: pointer;
   }
 }
-h3.project-category-title.active {
+h3.project-category-title.active, h3.project-category-title:focus, h3.project-category-title:hover   {
   background-color: #000035;
   color: #fff;
 }

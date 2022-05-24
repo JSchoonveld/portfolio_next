@@ -2,6 +2,7 @@ import { storyblokEditable } from "@storyblok/react";
 import {Button, Image, Modal, Carousel, CarouselItem} from "react-bootstrap";
 import {useState} from "react";
 import {animated, useSpring} from "react-spring";
+import {Waypoint} from "react-waypoint";
 
 const Preview = ({ blok }) => {
     const [showDetails, setShowDetails] = useState(false);
@@ -31,6 +32,14 @@ const Preview = ({ blok }) => {
         delay: 100,
         to: {opacity: !inView ? '0' : '1', top: !inView ? '0px' : '20px'},
     });
+
+    const [projectInView, setprojectInView] = useState(false);
+
+    const transition = useSpring({
+        delay: 150,
+        to: {opacity: !projectInView ? '0' : '1', transform: !projectInView ? 'scale(0)' : 'scale(1)'},
+    });
+
 
     let showButton = (() => {
 
@@ -89,7 +98,8 @@ const Preview = ({ blok }) => {
 
 
     return (
-        <div tabIndex={0} onMouseOver={() => setShowDetails(true)} onMouseLeave={() => setShowDetails(false)} style={{position: 'relative'}} className="project col-md-4">
+        <Waypoint onEnter={() => setprojectInView(true)}>
+        <animated.div  style={{ ...transition }} tabIndex={0} onMouseOver={() => setShowDetails(true)} onMouseLeave={() => setShowDetails(false)} className="project col-md-4">
             {showDetails ? showButton() : ''}
             <Image
                 src={blok.thumbnail.filename}
@@ -98,7 +108,8 @@ const Preview = ({ blok }) => {
                 height={210}
             />
 
-        </div>
+        </animated.div>
+        </Waypoint>
     )
 };
 
