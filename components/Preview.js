@@ -17,6 +17,10 @@ const Preview = ({ blok }) => {
         setShow(true)
     })
 
+    const popIntoView = useSpring({
+        delay: 100,
+        to: {opacity: !show ? '0' : '1'},
+    });
 
     const transitionUp = useSpring({
         delay: 100,
@@ -44,7 +48,7 @@ const Preview = ({ blok }) => {
                         </Button>
                     </animated.div>
 
-                    <Modal show={show} onHide={handleClose}>
+                    <Modal show={show} onHide={handleClose} style={{ ...popIntoView }}>
                         <Modal.Header>
                             <Carousel indicators={false}>
                                 {blok.images.map((image) => (
