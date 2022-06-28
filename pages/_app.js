@@ -34,7 +34,7 @@ storyblokInit({
 
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
-        TagManager.initialize({ gtmId: 'G-K2EEHMBFCH' });
+        TagManager.initialize({ gtmId: 'GTM-NWLRDST' });
     }, []);
   return <Component {...pageProps} />;
 }
