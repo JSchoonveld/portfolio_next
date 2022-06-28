@@ -28,19 +28,6 @@ export default function Home(props) {
     return (
         <div className={styles.container}>
           <Head>
-          <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-K2EEHMBFCH"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-K2EEHMBFCH');
-        `}
-      </Script>
                 <title>Jesse Schoonveld portfolio</title>
                 <meta name="description"
                       content="I'm currently studying web development and doing and internship as a front-end developer. This is my portfolio."/>
