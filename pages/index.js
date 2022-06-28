@@ -1,71 +1,95 @@
-import Head from "next/head";
-
-import NavBar from "../components/NavBar";
-import AboutSection from "../components/AboutSection";
-import Footer from "../components/Footer";
+import Head from 'next/head'
+import Script from 'next/script'
+import NavBar from '../components/NavBar'
+import AboutSection from '../components/AboutSection'
+import Footer from '../components/Footer'
 import ContactSection from "../components/ContactSection";
 import FadeHeader from "../components/FadeHeader";
-import { useSpring } from "react-spring";
+import {useSpring} from 'react-spring'
 
 import {
-  useStoryblokState,
-  getStoryblokApi,
-  StoryblokComponent,
+    useStoryblokState,
+    getStoryblokApi,
+    StoryblokComponent,
 } from "@storyblok/react";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Home(props) {
-  const story = props.story;
 
-  const styles = useSpring({
-    loop: true,
-    from: { opacity: 0, bottom: "-100px" },
-    to: { opacity: 1, bottom: "0" },
-  });
+    const story = props.story
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.main}>
-        <FadeHeader />
+    const styles = useSpring({
+        loop: true,
+        from: { opacity: 0, bottom: '-100px' },
+        to: { opacity: 1, bottom: '0' },
+    })
 
-        <NavBar />
+    return (
+        <div className={styles.container}>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-K2EEHMBFCH"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-        <AboutSection />
+          gtag('config', 'G-K2EEHMBFCH');
+        `}
+      </Script>
+          <Head>
+                <title>Jesse Schoonveld portfolio</title>
+                <meta name="description"
+                      content="I'm currently studying web development and doing and internship as a front-end developer. This is my portfolio."/>
+                <link rel="icon" href="favicon.ico"/>
+           </Head>
+            
+            <main className={styles.main}>
+                <FadeHeader/>
 
-        <div className="container">
-          <div className="row">
-            <StoryblokComponent blok={story.content} />
-          </div>
+
+                <NavBar/>
+
+                <AboutSection/>
+
+                <div className="container">
+                    <div className="row">
+                        <StoryblokComponent blok={story.content} />
+                    </div>
+                </div>
+
+
+                {/*<ProjectSection/>*/}
+
+                <ContactSection/>
+
+            </main>
+
+            <Footer/>
         </div>
-
-        {/*<ProjectSection/>*/}
-
-        <ContactSection />
-      </div>
-
-      <Footer />
-    </div>
-  );
+    )
 }
 
 export async function getStaticProps() {
-  // home is the default slug for the homepage in Storyblok
-  let slug = "home";
+    // home is the default slug for the homepage in Storyblok
+    let slug = "home";
 
-  // load the draft version
-  let sbParams = {
-    version: "draft", // or 'published'
-  };
+    // load the draft version
+    let sbParams = {
+        version: "draft", // or 'published'
+    };
 
-  const storyblokApi = getStoryblokApi();
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+    const storyblokApi = getStoryblokApi();
+    let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
 
-  return {
-    props: {
-      story: data ? data.story : false,
-      key: data ? data.story.id : false,
-    },
-    revalidate: 3600, // revalidate every hour
-  };
+    return {
+        props: {
+            story: data ? data.story : false,
+            key: data ? data.story.id : false,
+        },
+        revalidate: 3600, // revalidate every hour
+    };
 }
