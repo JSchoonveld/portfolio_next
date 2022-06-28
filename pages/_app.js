@@ -6,8 +6,6 @@ import Feature from "../components/Feature";
 import Grid from "../components/Grid";
 import Page from "../components/Page";
 import Teaser from "../components/Teaser";
-import { useEffect } from "react";
-import TagManager from "react-gtm-module";
 import Preview from "../components/Preview";
 import Projects from "../components/Projects";
 import { useSpring, animated } from "react-spring";
@@ -33,9 +31,6 @@ storyblokInit({
 });
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    TagManager.initialize({ gtmId: "GTM-NWLRDST" });
-  }, []);
   return <Component {...pageProps} />;
 }
 
