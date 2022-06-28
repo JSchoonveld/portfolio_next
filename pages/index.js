@@ -27,7 +27,8 @@ export default function Home(props) {
 
     return (
         <div className={styles.container}>
-      <Script
+          <Head>
+          <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-K2EEHMBFCH"
         strategy="afterInteractive"
       />
@@ -40,7 +41,6 @@ export default function Home(props) {
           gtag('config', 'G-K2EEHMBFCH');
         `}
       </Script>
-          <Head>
                 <title>Jesse Schoonveld portfolio</title>
                 <meta name="description"
                       content="I'm currently studying web development and doing and internship as a front-end developer. This is my portfolio."/>
